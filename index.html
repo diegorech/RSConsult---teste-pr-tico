@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <title>Loja Teste</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <span class="iconify" data-icon="mdi-radioactive" data-inline="false"></span>
+            </div>
+            <p> Loja Teste </p>
+        </div>
+        <div class="header-inputs">
+            <div class="search-container"> 
+                <!-- Borderless input -->
+                <input type="search" placeholder="Pesquisar" name="search" id="search">
+                <i class="material-icons">
+                    search
+                    </i>
+            </div>
+            <a href="#" target="_blank" > Entre ou cadastre-se </a>
+            <div class="cart-container">
+                <i class="material-icons">
+                    shopping_cart
+                    </i>
+                <div class="elipse">
+                    <p id="cartValue"> 0 </p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    
+    <div class="page-map">
+        <p> Home / Calçados / Produto ABC</p>
+    </div>
+    
+    <main class="main-container">
+        <div class="productImg-container">
+            <img src="./assets/produtoABC.png" alt="abc product">
+        </div>
+        <div class="product-container">
+            <div class="about-product">
+                <h1> Produto ABC </h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus placeat ullam provident voluptatem dolores voluptatibus animi esse quaerat quidem quisquam autem itaque facilis exercitationem incidunt quam debitis voluptatum, ea ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus explicabo autem quos sit, ut voluptatum quam delectus amet? Ut tempore cupiditate sed deleniti voluptate qui! Nihil omnis eos maiores laboriosam.</p>
+            </div>
+            <div class="price-container">
+                <p> R$ 199,00 </p>   
+                <h1> R$ 159,00 </h1>
+                <span>no boleto com <br> 10% de desconto</span>
+            </div>
+            <div class="stars-container">
+                <div class="stars">
+                    <i class="material-icons star">
+                        star
+                        </i>    
+                    <i class="material-icons star">
+                        star
+                        </i>    
+                    <i class="material-icons star">
+                        star
+                        </i>    
+                    <i class="material-icons star">
+                        star
+                        </i>    
+                    <i class="material-icons star">
+                        star
+                        </i>    
+                    <i class="material-icons">
+                        star
+                        </i>    
+                    
+                </div>
+                
+                <p  onclick="openOpinionContainer()" > Avalie agora </p>
+            </div>
+
+            <!-- Formulário de opinião   -->
+            <div class="opinion-container">
+                <p class="x" onclick="closeOpinionContainer()">x</p>
+                
+                    Nome: 
+                        <input type="text" name="userName" id="userName">
+                    Opinião:
+                        <textarea name="opinionTxt" id="opinionTxt" cols="30" rows="4">
+                            
+                        </textarea> 
+                    <button onclick="sendComment()" type="submit"> Enviar </button>
+                
+            </div>
+
+            <button class="buyButton" onclick="addToCart()"> 
+                <span class="check">✔</span> Comprar
+            </button>
+
+            <div class="comments-container">
+                <!-- Firstchild bold -->
+                <p> Opinião: </p>
+                <p>" <span class="comment-text"> Adorei o lorem ipsum, vou comprar outro </span> "</p>
+                <p>- <span class="comment-author"> Alberto Guerrra </span></p>
+            </div>
+        </div>
+        
+    </main>
+    <div class="menu-container">
+        <div class="button-container">
+            <div onmouseover="openTxtContainer('description')" class="menu-button">DESCRIÇÂO</div>
+            <div onmouseover="openTxtContainer('includedItems')" class="menu-button">ITENS INCLUSOS</div>
+            <div onmouseover="openTxtContainer('assurance')" class="menu-button">GARANTIA</div>
+        </div>
+        
+        <div class="textMenu-container">
+            <div class="description-text active ">
+                <h3> PRODUTO ABC </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi nostrum nulla suscipit, deleniti vero molestias corrupti mollitia laudantium. Quo, tenetur? Dignissimos rem molestias voluptatibus laudantium nam, voluptates soluta commodi.</p>
+            </div>
+            <div class="includedItems-text">
+                <h3> ITENS INCLUSOS </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit adipisci esse, quas in labore </p>
+            </div>
+            <div class="assurance-text">
+                <h3> GARANTIA </h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iusto perferendis voluptatem fuga. Rem neque impedit facere! Laborum minima maiores beatae, praesentium doloribus aperiam officiis non quibusdam iure sequi magni.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
